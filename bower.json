@@ -1,0 +1,14 @@
+{
+  "name": "Socket.IO-Chat-Room-with-Gravatar",
+  "version": "0.0.0",
+  "authors": [
+    ""
+  ],
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "bootstrap": "~3.3.1",
+    "angularjs": "~1.3.6",
+    "angular-route": "~1.3.6"
+  }
+}

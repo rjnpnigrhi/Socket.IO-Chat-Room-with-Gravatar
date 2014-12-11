@@ -1,0 +1,19 @@
+.create-room-wrapper {
+    margin-top: 10%;
+}
+
+.chat-room-wrapper {
+    margin-top: 15px;
+}
+
+.send-message {
+    padding-top: 7px;
+}
+
+.avatar{
+    height: 50px;
+    width: 50px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+}

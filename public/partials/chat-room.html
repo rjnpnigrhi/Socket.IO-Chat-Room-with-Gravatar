@@ -1,0 +1,33 @@
+<div class="row chat-room-wrapper">
+    <div class="col-md-3">
+        <label>Users:</label>
+        <ul class="list-group">
+            <li class="list-group-item" data-ng-repeat="user in roomDetails.users">{{ user.name }} {{ user.role == 'admin' ? ' (admin)' : '' }}</li>
+        </ul>
+    </div>
+    <div class="col-md-9">
+        <label>Messages:</label><br/>
+        <label data-ng-hide="roomDetails.messages.length > 0">No messages found</label>
+        <div class="media" data-ng-repeat="message in roomDetails.messages">
+            <a class="media-left media-top" href="javascript:">
+                <a class="media-left" href="#">
+                    <img data-ng-src="{{ message.user.image }}" class="avatar" alt="" data-holder-rendered="true">
+                </a>
+            </a>
+            <div class="media-body">
+                <h4 class="media-heading">{{ message.user.name }} :</h4>
+                <p>{{ message.message }}</p>
+            </div>
+        </div>
+    </div>
+    <nav class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+        <div class="container send-message">
+            <div class="input-group">
+                <input id="user-message-input" onkeypress="enterKeyHandler(event)" type="text" class="form-control" data-ng-model="userMessage" placeholder="Enter message here!">
+                <span class="input-group-btn">
+                <button class="btn btn-info enter-target" type="button" data-ng-click="sendMessage(userMessage)">Send Message</button>
+                </span>
+            </div><!-- /input-group -->
+        </div>
+    </nav>
+</div>
